@@ -95,3 +95,67 @@ Todas as APIs exigem autenticação para acessar os endpoints.
 🔹 **Cache**: Implemente cache com Redis para endpoints de leitura frequente.  
 🔹 **Documentação**: Cada API deve expor uma documentação Swagger/OpenAPI.  
 🔹 **Testes**: Testes unitários e de integração para validar funcionalidades.  
+
+
+## **Instalação API Python – Gestão de Jogadores**
+
+### Passo 1: Clone o repositório
+```bash
+git clone https://github.com/blomersi/UpTechPython.git
+cd UpTechPython
+```
+
+### Passo 2: Crie um ambiente virtual
+```bash
+python -m venv "env"
+```
+
+### Passo 3: Ative o ambiente virtual
+*  Linux/MaxOS:
+```bash
+source env/bin/activate
+```
+
+* Windows (CMD):
+```bash
+env\Scripts\activate
+```
+
+* Windows (PowerShell):
+```bash
+.\env\Scripts\Activate
+```
+
+### Passo 4: Instale as dependências
+
+```bash
+pip install -r requirements.txt
+```
+
+## **Configuração**
+
+Crie um arquivo .env na raiz do projeto. Adicione as seguintes configurações:
+
+```bash
+MONGODB_URL="mongodb://localhost:27017"
+DATABASE_NAME="UpTechPython"
+```
+
+O arquivo .env é usado para armazenar informações sensíveis e deve ser incluído no .gitignore para evitar o versionamento.
+
+## **Execução**
+Execute o servidor FastAPI:
+```bash
+uvicorn app.main:app --reload
+```
+O servidor será iniciado em:
+
+*  http://127.0.0.1:8000
+
+Acesse a documentação interativa do Swagger:
+
+*  http://127.0.0.1:8000/docs
+
+Documentação alternativa (Redoc):
+
+*  http://127.0.0.1:8000/redoc
